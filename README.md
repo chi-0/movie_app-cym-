@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+## 프로젝트 기획
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### 프로젝트 명
 
-## Available Scripts
+    영화 리뷰 사이트
 
-In the project directory, you can run:
+#### 제작 의도
 
-### `npm start`
+    현재 상영 영화에 대한 정보와 관람객들의 리뷰를 제공하고 개봉 예정 영화들을 소개하기 위함.       뿐만 아니라 예전 영화들의 리뷰 및 정보를 제공하기 위함.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 개발 목표
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    한눈에 알아보기 쉬운 UI로 단순한 header와 pc, 테블릿, 모바일 등 다양한 기기에 알맞은 사이즈로 제작
 
-### `npm test`
+    header
+    -> 로고와 아이콘으로 구성
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    home
+    -> 스와이프를 활용한 슬라이드로 카테고리별 영화 리스트 제작
 
-### `npm run build`
+    detail
+    -> 리뷰 등록 폼을 만들어 리뷰를 등록 할 수 있게 함.
+    -> 로그인 하지 않을시 리뷰 작성이 되지 않게 구현.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    search
+    -> 엔터를 누르지 않아도 검색결과가 나오게 구현.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    login
+    -> 아이디는 5자 이상, 비밀번호는 8자 이상
+    -> 에러 메세지
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Sign-up
+    -> 아이디, 비밀번호, 전화번호 입력으로 간단한 가입
 
-### `npm run eject`
+#### 활용 스킬
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    HTML, CSS, JS, Node.js, React
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### API 참고 사이트
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[바로가기](https://developer.themoviedb.org/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### 예상 사이트 맵
 
-## Learn More
+    Router - home
+           - detail
+           - search
+           - login
+           - sign-up
+           - pageNotFound
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 개발 계획
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    1일차
+    [] 라우터 구성
+    [] header 컴포넌트 제작
+    [] 폰트어썸으로 필요한 아이콘 연결
+    [] footer 컴포넌트 제작
+    [] globalStyled 컴포넌트 제작
+    [] styled-reset 연결
+    [] 폰트 연결
 
-### Code Splitting
+    2일차
+    [] home 컴포넌트 제작
+    [] api 구성
+    [] loading 컴포넌트 제작
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    3일차
+    [] detail 컴포넌트 제작
+    [] search 컴포넌트 제작
 
-### Analyzing the Bundle Size
+    4일차
+    [] login 컴포넌트 제작
+    [] sign-up 컴포넌트 제작
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    5일차
+    [] pageNotFound 컴포넌트 제작
+    [] 페이지별 타이틀(헬멧) 등록
+    [] 배포 테스트
 
-### Making a Progressive Web App
+    모바일 반응형 제작
+    [] home
+    [] detail
+    [] search
+    [] login
+    [] sign-up
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    태블릿 반응형 제작
+    [] home
+    [] detail
+    [] search
+    [] login
+    [] sign-up
 
-### Advanced Configuration
+## 개발 일정
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- 기간: 11.23 (목)
 
-### Deployment
+  > 프로젝트 기획, 사이트맵 구성 및 라우터
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- 기간: 11.24 (금)
 
-### `npm run build` fails to minify
+  > 디자인 관련 리서치 및 수집
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 기간: 11.25 (토)
+
+  > pc 버전 와이어 프레임 제작
+
+- 기간: 11.26 (일)
+
+  > 반응형 와이어 프레임 제작(모바일, 태블릿)
+
+- 기간: 11.27 (월)
+
+  > 디자인 기획 컨펌 후 수정 후 인터렉션 구성
+
+- 기간: 11.28 (화)
+
+  > 프로젝트 생성 후 라우터 연결, header & footer 컴포넌트 개발
+
+- 기간: 11.29 (수)
+
+  > 프로젝트 생성 후 라우터 연결, header & footer 컴포넌트 개발
+
+- 기간: 11.30 (목)
+
+  > Home 컴포넌트 개발 후 api 요청, loading 컴포넌트 개발
+
+- 기간: 12.1 (금)
+
+  > Detail & Search 컴포넌트 개발 후 api 요청
+
+- 기간: 12.2(토)
+
+  > login & sign-up 컴포넌트 개발
+
+- 기간: 12.3(일)
+
+  > pageNotFound 컴포넌트 개발 후 배포 테스트
+
+- 기간: 12.4 (월)
+
+  > 검사 후 오류 수정
+
+- 기간: 12.5 (화)
+
+  > 검사 후 배포
