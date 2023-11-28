@@ -52,13 +52,13 @@
 #### 개발 계획
 
     1일차
-    [] 라우터 구성
+    [x] 라우터 구성
     [] header 컴포넌트 제작
-    [] 폰트어썸으로 필요한 아이콘 연결
+    [x] 폰트어썸으로 필요한 아이콘 연결
     [] footer 컴포넌트 제작
-    [] globalStyled 컴포넌트 제작
-    [] styled-reset 연결
-    [] 폰트 연결
+    [x] globalStyled 컴포넌트 제작
+    [x] styled-reset 연결
+    [x] 폰트 연결
 
     2일차
     [] home 컴포넌트 제작
@@ -145,3 +145,10 @@
 - 기간: 12.5 (화)
 
   > 검사 후 배포
+
+### 설치 라이브러리
+
+- React Router DOM
+- styled-components
+- 폰트어썸
+- react-style-reset
