@@ -53,28 +53,34 @@
 
     1일차
     [x] 라우터 구성
-    [] header 컴포넌트 제작
+    [x] header 컴포넌트 제작
     [x] 폰트어썸으로 필요한 아이콘 연결
-    [] footer 컴포넌트 제작
+    [x] footer 컴포넌트 제작
     [x] globalStyled 컴포넌트 제작
     [x] styled-reset 연결
     [x] 폰트 연결
 
     2일차
     [] home 컴포넌트 제작
-    [] api 구성
-    [] loading 컴포넌트 제작
+    [] home api 구성
 
     3일차
     [] detail 컴포넌트 제작
-    [] search 컴포넌트 제작
+    [] detail api 구성
+    [] home 컨텐츠 링크 연결
 
     4일차
+    [] search 컴포넌트 제작
+    [] search api 구성
+
+    5일차
     [] login 컴포넌트 제작
     [] sign-up 컴포넌트 제작
 
-    5일차
+    6일차
+    [] 인터렉션 제작
     [] pageNotFound 컴포넌트 제작
+    [] loading 컴포넌트 제작
     [] 페이지별 타이틀(헬멧) 등록
     [] 배포 테스트
 
@@ -120,15 +126,15 @@
 
 - 기간: 11.29 (수)
 
-  > 프로젝트 생성 후 라우터 연결, header & footer 컴포넌트 개발
+  > Home 컴포넌트 개발 api 연결
 
 - 기간: 11.30 (목)
 
-  > Home 컴포넌트 개발 후 api 요청, loading 컴포넌트 개발
+  > Detail 컴포넌트 개발 후 api 연결 및 링크 연결
 
 - 기간: 12.1 (금)
 
-  > Detail & Search 컴포넌트 개발 후 api 요청
+  > Search 컴포넌트 개발 후 api 연결 및 링크 연결
 
 - 기간: 12.2(토)
 
@@ -136,7 +142,7 @@
 
 - 기간: 12.3(일)
 
-  > pageNotFound 컴포넌트 개발 후 배포 테스트
+  > pageNotFound 컴포넌트,loading 컴포넌트 개발 후 배포 테스트
 
 - 기간: 12.4 (월)
 
@@ -152,3 +158,6 @@
 - styled-components
 - 폰트어썸
 - react-style-reset
+- swiper
+- axios
+- @tanstack/react-query
