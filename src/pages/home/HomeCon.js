@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const Con = styled.div`
-  margin-bottom: 120px;
+  margin-bottom: ${(props) => props.$margin};
 `;
 
 const ConTitle = styled.h3`
@@ -15,6 +15,7 @@ const ConTitle = styled.h3`
 
 const ConImg = styled.img`
   width: 100%;
+  border-radius: 8px;
 `;
 
 const conSwiper = {
@@ -22,9 +23,9 @@ const conSwiper = {
   slidesPerView: 6.7,
 };
 
-export const HomeCon = ({ title, data }) => {
+export const HomeCon = ({ title, data, margin }) => {
   return (
-    <Con>
+    <Con $margin={margin}>
       <ConTitle>{title}</ConTitle>
       <Swiper {...conSwiper}>
         {data.map((data) => (

@@ -21,3 +21,8 @@ export const popularData = () =>
   fetch(url + "movie/popular?language=ko-KR", options).then((res) =>
     res.json()
   );
+
+export const comingData = () =>
+  fetch(url + "movie/upcoming?language=ko-KR", options).then((res) =>
+    res.json()
+  );
