@@ -35,8 +35,8 @@ export const Home = () => {
           {now && (
             <>
               <Main data={now} />
-              <HomeCon title="인기 영화" data={popular} margin="120px" />
-              <HomeCon title="개봉 예정 영화" data={coming} margin="0" />
+              <HomeCon title="인기 영화" data={popular} margin={120} />
+              <HomeCon title="개봉 예정 영화" data={coming} margin={0} />
             </>
           )}
         </>

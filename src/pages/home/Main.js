@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { IMG_URL } from "../../api/api";
+import { Link } from "react-router-dom";
 
 const Now = styled.div`
   margin-bottom: 120px;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1050px) {
     margin-bottom: 110px;
   }
 
@@ -20,7 +21,7 @@ const NowTitle = styled.h3`
   font-weight: 700;
   margin-bottom: 30px;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1050px) {
     font-size: 36px;
     margin-bottom: 25px;
   }
@@ -36,7 +37,7 @@ const NowImg = styled.img`
   margin-bottom: 15px;
   border-radius: 10px;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1050px) {
     margin-bottom: 10px;
   }
 
@@ -50,7 +51,7 @@ const ConTitle = styled.h4`
   font-size: 24px;
   font-weight: 500;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1050px) {
     font-size: 18px;
   }
 
@@ -63,7 +64,7 @@ const nowSwiper = {
   spaceBetween: 15,
   slidesPerView: 1.3,
   breakpoints: {
-    1000: {
+    1050: {
       spaceBetween: 30,
       slidesPerView: 2.6,
     },
@@ -82,8 +83,10 @@ export const Main = ({ data }) => {
       <Swiper {...nowSwiper}>
         {data.map((data) => (
           <SwiperSlide key={data.id}>
-            <NowImg src={IMG_URL + "/w500" + data.backdrop_path} />
-            <ConTitle>{data.title}</ConTitle>
+            <Link to={`/detail/${data.id}`}>
+              <NowImg src={IMG_URL + "/w1280" + data.backdrop_path} />
+              <ConTitle>{data.title}</ConTitle>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

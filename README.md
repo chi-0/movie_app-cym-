@@ -21,6 +21,7 @@
     detail
     -> 리뷰 등록 폼을 만들어 리뷰를 등록 할 수 있게 함.
     -> 로그인 하지 않을시 리뷰 작성이 되지 않게 구현.
+    -> 리뷰 별 구현해보기
 
     search
     -> 엔터를 누르지 않아도 검색결과가 나오게 구현.
@@ -61,8 +62,8 @@
     [x] 폰트 연결
 
     2일차
-    [] home 컴포넌트 제작
-    [] home api 구성
+    [x] home 컴포넌트 제작
+    [x] home api 구성
 
     3일차
     [] detail 컴포넌트 제작
@@ -126,7 +127,7 @@
 
 - 기간: 11.29 (수)
 
-  > Home 컴포넌트 개발 api 연결
+  > Home 컴포넌트 개발 api 연결, Detail 컴포넌트 개발 후 api 연결 및 링크 연결
 
 - 기간: 11.30 (목)
 
@@ -159,5 +160,7 @@
 - 폰트어썸
 - react-style-reset
 - swiper
+- node-fetch@2
 - axios
 - @tanstack/react-query
+- react-hook-form

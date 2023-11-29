@@ -16,7 +16,7 @@ const HeaderWrap = styled.header`
   left: 0;
   z-index: 99;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1050px) {
     padding: 11px 25px;
   }
 
@@ -29,7 +29,7 @@ const Logo = styled.h3`
   font-size: 32px;
   font-weight: 700;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1050px) {
     font-size: 28px;
   }
 
@@ -47,7 +47,7 @@ const HeaderMenu = styled.div`
     margin-left: 50px;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1050px) {
     font-size: 16px;
 
     a:nth-child(2) {

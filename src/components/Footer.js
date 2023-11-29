@@ -11,7 +11,7 @@ const FooterWrap = styled.footer`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1050px) {
     font-size: 15px;
   }
 

@@ -11,3 +11,9 @@ const instance = axios.create({
     language: "ko-KR",
   },
 });
+
+export const detailData = ({ queryKey }) => {
+  const [id] = queryKey;
+
+  return instance.get(`movie/${id}`).then((res) => res.data);
+};
