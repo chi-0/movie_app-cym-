@@ -52,7 +52,7 @@
 
 #### 개발 계획
 
-    1일차
+    1일차(화)
     [x] 라우터 구성
     [x] header 컴포넌트 제작
     [x] 폰트어썸으로 필요한 아이콘 연결
@@ -61,40 +61,43 @@
     [x] styled-reset 연결
     [x] 폰트 연결
 
-    2일차
+    2일차(수)
     [x] home 컴포넌트 제작
     [x] home api 구성
+    [x] home 컨텐츠 링크 연결
+    [x] detail 컴포넌트 제작
+    [x] detail api 구성
 
-    3일차
-    [] detail 컴포넌트 제작
-    [] detail api 구성
-    [] home 컨텐츠 링크 연결
-
-    4일차
+    3일차(목)
     [] search 컴포넌트 제작
     [] search api 구성
 
-    5일차
+    4일차(금)
     [] login 컴포넌트 제작
     [] sign-up 컴포넌트 제작
 
-    6일차
-    [] 인터렉션 제작
+    5일차(토)
+    [] 로그인시 헤더 로그아웃으로 변경
+    [] 로그인 안할시 리뷰 작성 안되게 하기
+    [] 회원가입 에러메세지 설정
+    [] 로그인 에러메세지 설정
+
+    6일차(일)
     [] pageNotFound 컴포넌트 제작
     [] loading 컴포넌트 제작
     [] 페이지별 타이틀(헬멧) 등록
     [] 배포 테스트
 
     모바일 반응형 제작
-    [] home
-    [] detail
+    [x] home
+    [x] detail
     [] search
     [] login
     [] sign-up
 
     태블릿 반응형 제작
-    [] home
-    [] detail
+    [x] home
+    [x] detail
     [] search
     [] login
     [] sign-up
@@ -131,7 +134,7 @@
 
 - 기간: 11.30 (목)
 
-  > Detail 컴포넌트 개발 후 api 연결 및 링크 연결
+  > Search 컴포넌트 개발 후 api 연결 및 링크 연결
 
 - 기간: 12.1 (금)
 

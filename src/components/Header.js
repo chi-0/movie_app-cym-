@@ -10,7 +10,8 @@ const HeaderWrap = styled.header`
   align-items: center;
   padding: 18px 50px;
   background-color: rgba(12, 0, 47, 0.6);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   position: fixed;
   top: 0;
   left: 0;
