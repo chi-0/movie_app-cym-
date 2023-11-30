@@ -67,7 +67,29 @@ const HeaderMenu = styled.div`
   }
 `;
 
+const Logout = styled.button`
+  all: unset;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+
+  @media screen and (max-width: 1050px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 799px) {
+    font-size: 15px;
+  }
+`;
+
 export const Header = () => {
+  const checkLogin = localStorage.getItem("login");
+
+  const clickHandler = () => {
+    localStorage.removeItem("login");
+    window.location.reload();
+  };
+
   return (
     <HeaderWrap>
       <Link to="/">
@@ -75,7 +97,12 @@ export const Header = () => {
       </Link>
 
       <HeaderMenu>
-        <Link to="/login">로그인</Link>
+        {checkLogin ? (
+          <Logout onClick={clickHandler}>로그아웃</Logout>
+        ) : (
+          <Link to="/login">로그인</Link>
+        )}
+
         <Link to="/search">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </Link>
