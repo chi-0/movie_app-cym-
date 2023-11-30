@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
 
@@ -18,6 +19,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
 
   > label {
     font-size: 32px;
@@ -63,6 +65,20 @@ const Input = styled.input`
   }
 `;
 
+const Message = styled.p`
+  color: salmon;
+  font-size: 14px;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+
+  @media screen and (max-width: 799px) {
+    bottom: 12px;
+    left: 22px;
+    font-size: 12px;
+  }
+`;
+
 const ReviewWrap = styled.div`
   display: flex;
   flex-direction: column-reverse;
@@ -92,10 +108,12 @@ const Review = styled.p`
 `;
 
 export const DetailForm = ({ data }) => {
+  const [errorMessage, setErrorMessage] = useState("");
+
   const {
     register,
     handleSubmit,
-    // formState: { errors, isValid },
+    formState: { errors, isValid },
     reset,
   } = useForm();
 
@@ -105,8 +123,13 @@ export const DetailForm = ({ data }) => {
       id: Math.random(),
       content: coment,
     };
+    const check = localStorage.getItem("login");
 
-    data.push(reviewBox);
+    check === null
+      ? setErrorMessage("로그인 후 이용해 주세요")
+      : data.push(reviewBox);
+
+    // data.push(reviewBox);
 
     reset({ coment: "" });
   };
@@ -123,6 +146,7 @@ export const DetailForm = ({ data }) => {
           placeholder="후기를 작성해 주세요"
           autoComplete="none"
         />
+        <Message>{errorMessage}</Message>
       </Form>
       <ReviewWrap>
         {data.map((data) => (

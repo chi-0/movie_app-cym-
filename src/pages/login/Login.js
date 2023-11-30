@@ -64,16 +64,17 @@ const LoginBtn = styled.button`
   color: #0c002f;
   padding: 15px 0;
   width: 230px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${(props) =>
+    props.$isValid ? "white" : "rgba(255, 255, 255, 0.3)"};
   border-radius: 30px;
-  cursor: not-allowed;
+  cursor: ${(props) => (props.$isValid ? "pointer" : "not-allowed")};
 `;
 
 export const Login = () => {
   const {
     register,
     handleSubmit,
-    // formState: { errors, isValid },
+    formState: { errors, isValid },
     reset,
   } = useForm();
 
@@ -90,18 +91,30 @@ export const Login = () => {
         <Title>로그인</Title>
         <Form onSubmit={handleSubmit(loginHandler)}>
           <Input
-            {...register("user", { required: "아이디를 입력하세요" })}
+            {...register("user", {
+              required: "아이디를 입력하세요",
+              minLength: {
+                value: 4,
+                message: "아이디는 4자리이상입니다.",
+              },
+            })}
             type="text"
             placeholder="아이디를 입력하세요"
             autoComplete="none"
           />
           <Input
-            {...register("password", { required: "비밀번호를 입력하세요" })}
+            {...register("password", {
+              required: "비밀번호를 입력하세요",
+              minLength: {
+                value: 6,
+                message: "비밀번호는 6자리 이상입니다.",
+              },
+            })}
             type="password"
             placeholder="비밀번호를 입력하세요"
           />
           <BtnWrap>
-            <LoginBtn>로그인</LoginBtn>
+            <LoginBtn $isValid={isValid}>로그인</LoginBtn>
             <Link to={"/sighUp"}>회원가입</Link>
           </BtnWrap>
         </Form>
