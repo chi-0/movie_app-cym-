@@ -16,19 +16,33 @@ const SearchWrap = styled.div`
 
 const Form = styled.form`
   width: fit-content;
-  margin-bottom: 50px;
   position: relative;
 `;
 
 const Input = styled.input`
   all: unset;
   box-sizing: border-box;
-  padding: 15px 0;
-  padding-right: 10px;
+  padding: 10px 0;
+  padding-right: 40px;
   font-size: 32px;
   font-weight: 700;
   width: 70vw;
   border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+
+  &:focus {
+    border-bottom: 2px solid white;
+  }
+
+  @media screen and (max-width: 1050px) {
+    padding: 5px 0;
+    padding-right: 25px;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 799px) {
+    padding: 5px 0;
+    padding-right: 10px;
+    font-size: 16px;
+  }
 `;
 
 const Button = styled.button`
@@ -40,11 +54,18 @@ const Button = styled.button`
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+
+  @media screen and (max-width: 1050px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 799px) {
+    font-size: 16px;
+  }
 `;
 
 export const Search = () => {
   const [text, SetText] = useState();
-  const [valid, SetValid] = useState(false);
+  const [valid, setValid] = useState(false);
 
   const searchQuery = useQueries({
     queries: [
@@ -78,7 +99,7 @@ export const Search = () => {
   const searchSubmit = (data) => {
     const { search } = data;
     SetText(search);
-    SetValid(true);
+    setValid(true);
     refetch();
   };
 

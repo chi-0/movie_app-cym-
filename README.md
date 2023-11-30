@@ -70,7 +70,7 @@
 
     3일차(목)
     [x] search api 구성
-    [] search 컴포넌트 제작
+    [x] search 컴포넌트 제작
 
     4일차(금)
     [] login 컴포넌트 제작
@@ -91,14 +91,14 @@
     모바일 반응형 제작
     [x] home
     [x] detail
-    [] search
+    [x] search
     [] login
     [] sign-up
 
     태블릿 반응형 제작
     [x] home
     [x] detail
-    [] search
+    [x] search
     [] login
     [] sign-up
 
