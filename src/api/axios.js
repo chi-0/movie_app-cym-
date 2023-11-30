@@ -42,3 +42,6 @@ export const getSearch = ({ queryKey }) => {
     .get(`search/movie?query=${text}&language=ko-KR`)
     .then((res) => res.data);
 };
+
+export const getTrend = () =>
+  instance.get(`trending/movie/day`).then((res) => res.data);

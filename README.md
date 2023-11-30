@@ -69,8 +69,8 @@
     [x] detail api 구성
 
     3일차(목)
+    [x] search api 구성
     [] search 컴포넌트 제작
-    [] search api 구성
 
     4일차(금)
     [] login 컴포넌트 제작
