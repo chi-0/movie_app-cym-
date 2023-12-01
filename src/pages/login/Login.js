@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Wrap } from "../../components/Wrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 
@@ -144,6 +144,7 @@ const ErrorM = styled.p`
 
 export const Login = () => {
   const [errorText, setErrorText] = useState();
+  const loginNav = useNavigate();
 
   const {
     register,
@@ -159,7 +160,8 @@ export const Login = () => {
     reset({ user: "", password: "" });
     if (userId === user && userPassword === password) {
       localStorage.setItem("login", true);
-      window.location.replace("/");
+      loginNav("/");
+      window.location.reload();
     } else {
       setErrorText("아이디 또는 비밀번호가 틀렸습니다.");
     }
