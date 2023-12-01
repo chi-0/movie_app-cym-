@@ -4,7 +4,7 @@ import { IMG_URL } from "../../api/api";
 const DetailWrap = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 
   @media screen and (max-width: 1050px) {
     margin-bottom: 60px;

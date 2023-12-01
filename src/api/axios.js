@@ -45,3 +45,9 @@ export const getSearch = ({ queryKey }) => {
 
 export const getTrend = () =>
   instance.get(`trending/movie/day`).then((res) => res.data);
+
+export const getVideo = ({ queryKey }) => {
+  const [id] = queryKey;
+
+  return instance.get(`movie/${id}/videos`).then((res) => res.data);
+};
