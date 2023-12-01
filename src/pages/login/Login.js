@@ -54,12 +54,12 @@ const Input = styled.input`
     font-size: 16px;
     padding: 10px 25px;
     width: 360px;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
   }
   @media screen and (max-width: 799px) {
     font-size: 14px;
     width: 280px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -120,7 +120,7 @@ const LoginBtn = styled.button`
   @media screen and (max-width: 799px) {
     padding: 10px 0;
     width: 280px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -133,11 +133,11 @@ const ErrorM = styled.p`
 
   @media screen and (max-width: 1050px) {
     font-size: 12px;
-    bottom: -2px;
+    bottom: 0px;
   }
   @media screen and (max-width: 799px) {
     font-size: 10px;
-    bottom: -2px;
+    bottom: 0px;
     left: 25px;
   }
 `;

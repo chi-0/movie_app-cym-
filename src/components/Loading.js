@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Con = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,11 +12,7 @@ const Con = styled.div`
 export const Loading = () => {
   return (
     <Con>
-      <SyncLoader
-        style={{
-          color: "#111111",
-        }}
-      />
+      <SyncLoader color={"white"} />
     </Con>
   );
 };

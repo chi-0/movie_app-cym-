@@ -4,6 +4,7 @@ import { useQueries } from "@tanstack/react-query";
 import { detailData, getReview } from "../../api/axios";
 import { DetailCon } from "./DetailCon";
 import { DetailForm } from "./DetailForm";
+import { Loading } from "../../components/Loading";
 
 export const Detail = () => {
   const { id } = useParams();
@@ -29,7 +30,7 @@ export const Detail = () => {
   return (
     <Wrap>
       {detailLoading || reviewLoading ? (
-        "loding"
+        <Loading />
       ) : (
         <>
           <DetailCon data={detail} />

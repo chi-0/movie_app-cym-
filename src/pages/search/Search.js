@@ -8,6 +8,7 @@ import { SearchTrend } from "./SearchTrend";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { SearchCon } from "./SearchCon";
+import { Loading } from "../../components/Loading";
 
 const SearchWrap = styled.div`
   width: fit-content;
@@ -123,7 +124,7 @@ export const Search = () => {
         {!search && (
           <>
             {trendIsLoading ? (
-              "loading"
+              <Loading />
             ) : (
               <>
                 <SearchTrend data={trend} />

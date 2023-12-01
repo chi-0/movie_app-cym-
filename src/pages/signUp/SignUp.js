@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Wrap } from "../../components/Wrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 
@@ -146,6 +146,7 @@ const ErrorM = styled.p`
 
 export const SignUp = () => {
   const [isPassword, setIsPassword] = useState();
+  const loginNav = useNavigate();
 
   const {
     register,
@@ -158,7 +159,7 @@ export const SignUp = () => {
     if (password === checkPassword) {
       localStorage.setItem("id", user);
       localStorage.setItem("password", password);
-      window.location.replace("/");
+      loginNav("/login");
     } else {
       setIsPassword("비밀번호가 다릅니다.");
     }
