@@ -16,7 +16,7 @@ const Title = styled.h3`
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 30px;
-  opacity: 0.6;
+  opacity: 0.4;
 
   @media screen and (max-width: 1050px) {
     font-size: 28px;
@@ -37,6 +37,7 @@ const PopSearchWrap = styled.div`
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 18px;
+    opacity: 0.6;
   }
 
   @media screen and (max-width: 1050px) {

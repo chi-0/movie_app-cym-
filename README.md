@@ -73,34 +73,39 @@
     [x] search 컴포넌트 제작
 
     4일차(금)
-    [] login 컴포넌트 제작
-    [] sign-up 컴포넌트 제작
+    [x] 로그인시 헤더 로그아웃으로 변경
+    [x] 로그인 안할시 리뷰 작성 안되게 하기
+    [x] login 컴포넌트 제작
+    [x] sign-up 컴포넌트 제작
+    [x] 회원가입 에러메세지 설정
+    [x] 로그인 에러메세지 설정
+    [] loading 컴포넌트 제작
 
     5일차(토)
-    [] 로그인시 헤더 로그아웃으로 변경
-    [] 로그인 안할시 리뷰 작성 안되게 하기
-    [] 회원가입 에러메세지 설정
-    [] 로그인 에러메세지 설정
+    [] pageNotFound 컴포넌트 제작
+    [] 페이지별 타이틀(헬멧) 등록
+    [] 상세페이지에 예고편 만들기(더보기)
+    [] 뒤로가기 만들기
+    [] 배포 테스트
+
 
     6일차(일)
-    [] pageNotFound 컴포넌트 제작
-    [] loading 컴포넌트 제작
-    [] 페이지별 타이틀(헬멧) 등록
+    [] 오류 해결
     [] 배포 테스트
 
     모바일 반응형 제작
     [x] home
     [x] detail
     [x] search
-    [] login
-    [] sign-up
+    [x] login
+    [x] sign-up
 
     태블릿 반응형 제작
     [x] home
     [x] detail
     [x] search
-    [] login
-    [] sign-up
+    [x] login
+    [x] sign-up
 
     해결해야할것
     [] 검색 후 다른 페이지 갔다가 돌아오면 undefined값으로 검색되는 현상
@@ -141,15 +146,15 @@
 
 - 기간: 12.1 (금)
 
-  > Search 컴포넌트 개발 후 api 연결 및 링크 연결
+  > login & sign-up 컴포넌트 개발
 
 - 기간: 12.2(토)
 
-  > login & sign-up 컴포넌트 개발
+  > pageNotFound 컴포넌트,loading 컴포넌트 개발 후 배포 테스트
 
 - 기간: 12.3(일)
 
-  > pageNotFound 컴포넌트,loading 컴포넌트 개발 후 배포 테스트
+  > 오류 해결하고 배포 테스트
 
 - 기간: 12.4 (월)
 
@@ -170,3 +175,4 @@
 - axios
 - @tanstack/react-query
 - react-hook-form
+- react-spinners

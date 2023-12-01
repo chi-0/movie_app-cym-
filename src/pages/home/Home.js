@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { comingData, nowData, popularData } from "../../api/api";
 import { Main } from "./Main";
 import { HomeCon } from "./HomeCon";
+import { Loading } from "../../components/Loading";
 
 export const Home = () => {
   const [now, setNow] = useState();
@@ -29,7 +30,7 @@ export const Home = () => {
   return (
     <Wrap>
       {isLoading ? (
-        "loading"
+        <Loading />
       ) : (
         <>
           {now && (

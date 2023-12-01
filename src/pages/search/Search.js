@@ -113,7 +113,7 @@ export const Search = () => {
             })}
             type="text"
             placeholder="찾고싶은 영화를 입력해 보세요."
-            autoComplete="none"
+            autoComplete="off"
           />
           <Button>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
