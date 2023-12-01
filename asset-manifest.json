@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/movie_app-cym-/static/css/main.900c1a46.css",
+    "main.js": "/movie_app-cym-/static/js/main.41bb214d.js",
+    "static/media/spotlight.png": "/movie_app-cym-/static/media/spotlight.fbc69f7c8753e09b2ea4.png",
+    "index.html": "/movie_app-cym-/index.html",
+    "main.900c1a46.css.map": "/movie_app-cym-/static/css/main.900c1a46.css.map",
+    "main.41bb214d.js.map": "/movie_app-cym-/static/js/main.41bb214d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.900c1a46.css",
+    "static/js/main.41bb214d.js"
+  ]
+}
