@@ -6,6 +6,7 @@ import { DetailCon } from "./DetailCon";
 import { DetailForm } from "./DetailForm";
 import { Loading } from "../../components/Loading";
 import { DetailVideo } from "./DetailVideo";
+import { PageTitle } from "../../components/PageTitle";
 
 export const Detail = () => {
   const { id } = useParams();
@@ -35,12 +36,15 @@ export const Detail = () => {
 
   return (
     <Wrap>
+      <PageTitle title={"상세페이지"} />
       {detailLoading || reviewLoading ? (
         <Loading />
       ) : (
         <>
           <DetailCon data={detail} />
-          {!videoLoading && (
+          {videoLoading ? (
+            "loading..."
+          ) : (
             <>
               <DetailVideo data={videoPlay} />
             </>

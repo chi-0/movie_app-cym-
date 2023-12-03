@@ -3,6 +3,7 @@ import { Wrap } from "../../components/Wrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { PageTitle } from "../../components/PageTitle";
 
 const LoginWrap = styled.div`
   display: flex;
@@ -172,6 +173,7 @@ export const Login = () => {
 
   return (
     <Wrap>
+      <PageTitle title={"로그인"} />
       <LoginWrap>
         <Title>로그인</Title>
         <Form onSubmit={handleSubmit(loginHandler)}>

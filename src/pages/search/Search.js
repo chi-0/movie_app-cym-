@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { SearchCon } from "./SearchCon";
 import { Loading } from "../../components/Loading";
+import { PageTitle } from "../../components/PageTitle";
 
 const SearchWrap = styled.div`
   width: fit-content;
@@ -106,6 +107,7 @@ export const Search = () => {
 
   return (
     <Wrap>
+      <PageTitle title={"검색"} />
       <SearchWrap>
         <Form onSubmit={handleSubmit(searchSubmit)}>
           <Input

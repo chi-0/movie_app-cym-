@@ -4,6 +4,7 @@ import { comingData, nowData, popularData } from "../../api/api";
 import { Main } from "./Main";
 import { HomeCon } from "./HomeCon";
 import { Loading } from "../../components/Loading";
+import { PageTitle } from "../../components/PageTitle";
 
 export const Home = () => {
   const [now, setNow] = useState();
@@ -29,6 +30,7 @@ export const Home = () => {
 
   return (
     <Wrap>
+      <PageTitle title={"홈"} />
       {isLoading ? (
         <Loading />
       ) : (

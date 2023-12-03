@@ -3,6 +3,7 @@ import { Wrap } from "../../components/Wrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { PageTitle } from "../../components/PageTitle";
 
 const SignUpWrap = styled.div`
   display: flex;
@@ -167,6 +168,7 @@ export const SignUp = () => {
 
   return (
     <Wrap>
+      <PageTitle title={"회원가입"} />
       <SignUpWrap>
         <Title>회원가입</Title>
         <Form onSubmit={handleSubmit(signUpHandler)}>

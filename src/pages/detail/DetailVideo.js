@@ -23,6 +23,13 @@ const VideoWrap = styled.div`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 10px;
   row-gap: 20px;
+
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 799px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const VideoBox = styled.div`
@@ -32,6 +39,14 @@ const VideoBox = styled.div`
 
 const VideoTitle = styled.p`
   margin-bottom: 5px;
+  font-weight: 700;
+
+  @media screen and (max-width: 1050px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 799px) {
+    font-size: 14px;
+  }
 `;
 
 const Iframe = styled.iframe`
@@ -51,6 +66,8 @@ const Btn = styled.button`
   align-items: center;
   cursor: pointer;
   font-size: 45px;
+  background-color: #0c002f;
+  border-radius: 50%;
 `;
 
 export const DetailVideo = ({ data }) => {
@@ -72,7 +89,7 @@ export const DetailVideo = ({ data }) => {
       <VideoWrap $over={over} $height={isHeight}>
         {data.map((data) => (
           <VideoBox key={data.id}>
-            <VideoTitle>{data.name.slice(0, 16) + "..."}</VideoTitle>
+            <VideoTitle>{data.name.slice(0, 14) + "..."}</VideoTitle>
             <Iframe
               src={`https://www.youtube.com/embed/${data.key}`}
               title={data.name}

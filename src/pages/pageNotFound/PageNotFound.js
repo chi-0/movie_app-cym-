@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Wrap } from "../../components/Wrap";
 
 import spotlight from "./img/spotlight.png";
+import { PageTitle } from "../../components/PageTitle";
 
 const PageWrap = styled.div`
   width: 100%;
@@ -50,6 +51,7 @@ const Desc = styled.p`
 export const PageNotFound = () => {
   return (
     <Wrap>
+      <PageTitle title={"페이지를 찾을 수 없습니다"} />
       <PageWrap>
         <BgImg src={spotlight} />
         <Title>404</Title>
