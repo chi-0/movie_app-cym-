@@ -6,17 +6,14 @@ import styled from "styled-components";
 const Btn = styled.button`
   all: unset;
   font-size: 36px;
-  position: absolute;
-  top: 120px;
-  left: 80px;
-  opacity: 0.6;
   cursor: pointer;
-
-  &:hover {
-    opacity: 1;
-  }
+  position: absolute;
+  top: 140px;
+  left: 80px;
+  display: none;
 
   @media screen and (max-width: 1050px) {
+    display: block;
     font-size: 32px;
     top: 65px;
     left: 25px;

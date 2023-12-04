@@ -10,6 +10,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { SearchCon } from "./SearchCon";
 import { Loading } from "../../components/Loading";
 import { PageTitle } from "../../components/PageTitle";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 const SearchWrap = styled.div`
   width: fit-content;
@@ -83,11 +84,7 @@ export const Search = () => {
     ],
   });
 
-  const {
-    data: searchData,
-    isLoading: searchIsLoading,
-    refetch,
-  } = searchQuery[0];
+  const { data: searchData, isLoading: searchIsLoading } = searchQuery[0];
   const { data: trendData, isLoading: trendIsLoading } = searchQuery[1];
   const search = searchData?.results;
   const trend = trendData?.results;
@@ -102,8 +99,9 @@ export const Search = () => {
     const { search } = data;
     SetText(search);
     setValid(true);
-    refetch();
   };
+
+  useScrollTop();
 
   return (
     <Wrap>

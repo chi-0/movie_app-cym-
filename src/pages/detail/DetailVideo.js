@@ -1,8 +1,3 @@
-import {
-  faCircleChevronDown,
-  faCircleChevronUp,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -80,6 +75,8 @@ const Btn = styled.button`
 
   > p {
     font-size: 14px;
+    text-align: center;
+    line-height: 19px;
     opacity: 0.6;
   }
 `;
@@ -115,13 +112,15 @@ export const DetailVideo = ({ data }) => {
       <Btn onClick={clickHandler}>
         {over === "hidden" ? (
           <>
-            <p>영상보기</p>
-            <FontAwesomeIcon icon={faCircleChevronDown} />
+            <p>
+              관련영상
+              <br />
+              보기
+            </p>
           </>
         ) : (
           <>
-            <FontAwesomeIcon icon={faCircleChevronUp} />
-            <p>닫기</p>
+            <p>&nbsp; &nbsp; 닫기 &nbsp; &nbsp;</p>
           </>
         )}
       </Btn>

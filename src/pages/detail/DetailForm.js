@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
 
@@ -107,10 +107,31 @@ const Review = styled.p`
   }
 `;
 
-const ReviewBtn = styled.button``;
+const ReviewBtn = styled.button`
+  all: unset;
+  font-size: 15px;
+  opacity: 0.3;
+  cursor: pointer;
+
+  @media screen and (max-width: 1050px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 799px) {
+    font-size: 13px;
+  }
+`;
 
 export const DetailForm = ({ data }) => {
   const [errorMessage, setErrorMessage] = useState("");
+  const [textMore, setTextMore] = useState();
+  const [counter, setCounter] = useState(0);
+
+  const reviewRef = useRef(counter);
+  const { current } = reviewRef;
+
+  useEffect(() => {
+    setTextMore(current);
+  }, [current]);
 
   const {
     register,
@@ -136,6 +157,11 @@ export const DetailForm = ({ data }) => {
     reset({ coment: "" });
   };
 
+  const clickHandler = (e) => {
+    e.target.parentNode.classList.add("pick");
+    setCounter((prev) => prev + 1);
+  };
+
   return (
     <FormWrap>
       <Form onSubmit={handleSubmit(ReviewSubmit)}>
@@ -150,11 +176,22 @@ export const DetailForm = ({ data }) => {
         />
         <Message>{errorMessage}</Message>
       </Form>
-      <ReviewWrap>
-        {data.map((data) => (
+      <ReviewWrap ref={reviewRef}>
+        {data.map((data, index) => (
           <Review key={data.id}>
-            {data.content.slice(0, 100) + "..."}
-            <ReviewBtn>더보기</ReviewBtn>
+            {textMore && (
+              <>
+                {textMore.children[index].classList.contains("pick")
+                  ? data.content
+                  : data.content.slice(0, 100) + "... "}
+                <ReviewBtn onClick={clickHandler}>
+                  {data.content.length > 100
+                    ? textMore.children[index].classList.contains("pick") ||
+                      "더보기"
+                    : ""}
+                </ReviewBtn>
+              </>
+            )}
           </Review>
         ))}
       </ReviewWrap>

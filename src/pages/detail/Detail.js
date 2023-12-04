@@ -8,11 +8,10 @@ import { Loading } from "../../components/Loading";
 import { DetailVideo } from "./DetailVideo";
 import { PageTitle } from "../../components/PageTitle";
 import { useScrollTop } from "../../lib/useScrollTop";
+import { BackPage } from "../../components/BackPage";
 
 export const Detail = () => {
   const { id } = useParams();
-
-  useScrollTop();
 
   const queries = useQueries({
     queries: [
@@ -37,9 +36,12 @@ export const Detail = () => {
   const review = reviewData?.results;
   const videoPlay = videoData?.results;
 
+  useScrollTop();
+
   return (
     <Wrap>
       <PageTitle title={"상세페이지"} />
+      <BackPage />
       {detailLoading || reviewLoading ? (
         <Loading />
       ) : (

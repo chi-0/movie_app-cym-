@@ -8,14 +8,12 @@ import { PageNotFound } from "./pages/pageNotFound/PageNotFound";
 import { GlobalStyled } from "./style/GlobalStyled";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { BackPage } from "./components/BackPage";
 
 export const Router = () => {
   return (
     <HashRouter>
       <GlobalStyled />
       <Header />
-      <BackPage />
 
       <Routes>
         <Route path="/" element={<Home />} />
