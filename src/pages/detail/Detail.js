@@ -7,9 +7,12 @@ import { DetailForm } from "./DetailForm";
 import { Loading } from "../../components/Loading";
 import { DetailVideo } from "./DetailVideo";
 import { PageTitle } from "../../components/PageTitle";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 export const Detail = () => {
   const { id } = useParams();
+
+  useScrollTop();
 
   const queries = useQueries({
     queries: [

@@ -107,6 +107,8 @@ const Review = styled.p`
   }
 `;
 
+const ReviewBtn = styled.button``;
+
 export const DetailForm = ({ data }) => {
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -144,13 +146,16 @@ export const DetailForm = ({ data }) => {
           })}
           type="text"
           placeholder="후기를 작성해 주세요"
-          autoComplete="none"
+          autoComplete="off"
         />
         <Message>{errorMessage}</Message>
       </Form>
       <ReviewWrap>
         {data.map((data) => (
-          <Review key={data.id}>{data.content}</Review>
+          <Review key={data.id}>
+            {data.content.slice(0, 100) + "..."}
+            <ReviewBtn>더보기</ReviewBtn>
+          </Review>
         ))}
       </ReviewWrap>
     </FormWrap>

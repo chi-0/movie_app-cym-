@@ -5,12 +5,17 @@ import { Main } from "./Main";
 import { HomeCon } from "./HomeCon";
 import { Loading } from "../../components/Loading";
 import { PageTitle } from "../../components/PageTitle";
+import { useScrollTop } from "../../lib/useScrollTop";
+import { useSearchValid } from "../../lib/useSearchValid";
 
 export const Home = () => {
   const [now, setNow] = useState();
   const [popular, setPopular] = useState();
   const [coming, setComing] = useState();
   const [isLoading, setIsLoading] = useState(true);
+
+  useScrollTop();
+  useSearchValid();
 
   useEffect(() => {
     (async () => {

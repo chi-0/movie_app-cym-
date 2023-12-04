@@ -89,8 +89,10 @@
 
     6일차(일)
     [x] 페이지별 타이틀(헬멧) 등록
+    [x] 페이지 상단이동
 
     7일차(월)
+    [] 댓글 글자제한 두고 더보기 만들기
     [] 오류 해결
     [] 배포 테스트
 
@@ -178,3 +180,4 @@
 - react-hook-form
 - react-spinners
 - react-helmet-async
+- gh-pages

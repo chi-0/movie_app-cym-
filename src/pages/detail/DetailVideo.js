@@ -51,6 +51,14 @@ const VideoTitle = styled.p`
 
 const Iframe = styled.iframe`
   width: 100%;
+  height: 15vw;
+
+  @media screen and (max-width: 1050px) {
+    height: 20vw;
+  }
+  @media screen and (max-width: 799px) {
+    height: 30vw;
+  }
 `;
 
 const Btn = styled.button`
@@ -68,6 +76,12 @@ const Btn = styled.button`
   font-size: 45px;
   background-color: #0c002f;
   border-radius: 50%;
+  flex-direction: column;
+
+  > p {
+    font-size: 14px;
+    opacity: 0.6;
+  }
 `;
 
 export const DetailVideo = ({ data }) => {
@@ -101,11 +115,13 @@ export const DetailVideo = ({ data }) => {
       <Btn onClick={clickHandler}>
         {over === "hidden" ? (
           <>
+            <p>영상보기</p>
             <FontAwesomeIcon icon={faCircleChevronDown} />
           </>
         ) : (
           <>
             <FontAwesomeIcon icon={faCircleChevronUp} />
+            <p>닫기</p>
           </>
         )}
       </Btn>
