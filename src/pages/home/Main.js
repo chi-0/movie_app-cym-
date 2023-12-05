@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
+import "./Main.css";
 import { IMG_URL } from "../../api/api";
 import { Link } from "react-router-dom";
 
@@ -80,7 +83,7 @@ export const Main = ({ data }) => {
   return (
     <Now>
       <NowTitle>현재 상영중</NowTitle>
-      <Swiper {...nowSwiper}>
+      <Swiper {...nowSwiper} modules={[Navigation]} navigation>
         {data.map((data) => (
           <SwiperSlide key={data.id}>
             <Link to={`/detail/${data.id}`}>
