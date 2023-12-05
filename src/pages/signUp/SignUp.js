@@ -130,7 +130,7 @@ const ErrorM = styled.p`
   font-size: 14px;
   color: salmon;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 30px;
 
   @media screen and (max-width: 1050px) {
@@ -157,6 +157,17 @@ export const SignUp = () => {
 
   const signUpHandler = (data) => {
     const { user, password, checkPassword } = data;
+    const userCheckSpace = user.match(/\s/g);
+    const passwordCheckSpace = password.match(/\s/g);
+    const userCheckKorean = user.match(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/);
+    const passwordCheckKorean = password.match(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/);
+
+    if (userCheckSpace || passwordCheckSpace) {
+      return setIsPassword("공백은 사용 할 수 없습니다.");
+    } else if (userCheckKorean || passwordCheckKorean) {
+      return setIsPassword("한글은 사용 할 수 없습니다.");
+    }
+
     if (password === checkPassword) {
       localStorage.setItem("id", user);
       localStorage.setItem("password", password);

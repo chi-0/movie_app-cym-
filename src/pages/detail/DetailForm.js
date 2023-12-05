@@ -83,6 +83,7 @@ const ReviewWrap = styled.div`
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
+  word-break: break-all;
 `;
 
 const Review = styled.p`
@@ -112,6 +113,7 @@ const ReviewBtn = styled.button`
   font-size: 15px;
   opacity: 0.3;
   cursor: pointer;
+  display: inline-block;
 
   @media screen and (max-width: 1050px) {
     font-size: 14px;
@@ -152,8 +154,6 @@ export const DetailForm = ({ data }) => {
       ? setErrorMessage("로그인 후 이용해 주세요")
       : data.push(reviewBox);
 
-    // data.push(reviewBox);
-
     reset({ coment: "" });
   };
 
@@ -181,12 +181,14 @@ export const DetailForm = ({ data }) => {
           <Review key={data.id}>
             {textMore && (
               <>
-                {textMore.children[index].classList.contains("pick")
+                {textMore.children[index]?.classList.contains("pick")
                   ? data.content
-                  : data.content.slice(0, 100) + "... "}
+                  : data.content.length > 100
+                  ? data.content.slice(0, 100) + "... "
+                  : data.content}
                 <ReviewBtn onClick={clickHandler}>
                   {data.content.length > 100
-                    ? textMore.children[index].classList.contains("pick") ||
+                    ? textMore.children[index]?.classList.contains("pick") ||
                       "더보기"
                     : ""}
                 </ReviewBtn>
