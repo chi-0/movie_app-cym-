@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { IMG_URL } from "../../api/api";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 
 const Con = styled.div`
@@ -60,7 +62,7 @@ export const HomeCon = ({ title, data, margin }) => {
   return (
     <Con $margin={margin}>
       <ConTitle>{title}</ConTitle>
-      <Swiper {...conSwiper}>
+      <Swiper {...conSwiper} modules={[Navigation]} navigation>
         {data.map((data) => (
           <SwiperSlide key={data.id}>
             <Link to={`/detail/${data.id}`}>

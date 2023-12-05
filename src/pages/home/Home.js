@@ -6,6 +6,7 @@ import { HomeCon } from "./HomeCon";
 import { Loading } from "../../components/Loading";
 import { PageTitle } from "../../components/PageTitle";
 import { useScrollTop } from "../../lib/useScrollTop";
+import "./Home.css";
 
 export const Home = () => {
   const [now, setNow] = useState();
