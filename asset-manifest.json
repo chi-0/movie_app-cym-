@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/movie_app-cym-/static/css/main.43442a8a.css",
-    "main.js": "/movie_app-cym-/static/js/main.2dda2a9d.js",
+    "main.js": "/movie_app-cym-/static/js/main.ca93ba51.js",
     "static/media/spotlight.png": "/movie_app-cym-/static/media/spotlight.fbc69f7c8753e09b2ea4.png",
     "index.html": "/movie_app-cym-/index.html",
     "main.43442a8a.css.map": "/movie_app-cym-/static/css/main.43442a8a.css.map",
-    "main.2dda2a9d.js.map": "/movie_app-cym-/static/js/main.2dda2a9d.js.map"
+    "main.ca93ba51.js.map": "/movie_app-cym-/static/js/main.ca93ba51.js.map"
   },
   "entrypoints": [
     "static/css/main.43442a8a.css",
-    "static/js/main.2dda2a9d.js"
+    "static/js/main.ca93ba51.js"
   ]
 }
