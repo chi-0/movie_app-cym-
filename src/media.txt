@@ -5,6 +5,5 @@
     
   }
 
-
-
-  index.js:12  [Report Only] This document requires 'TrustedScript' assignment.
+  - 모바일 상세페이지 top값 다시 잡기
+  - 회원가입 에러메세지 추가하기

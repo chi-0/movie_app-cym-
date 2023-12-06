@@ -6,14 +6,15 @@
 
 #### 제작 의도
 
-    현재 상영 영화에 대한 정보와 관람객들의 리뷰를 제공하고 개봉 예정 영화들을 소개하기 위함.       뿐만 아니라 예전 영화들의 리뷰 및 정보를 제공하기 위함.
+    현재 상영 영화에 대한 정보와 관람객들의 리뷰를 제공하고 개봉 예정 영화들을 소개하기 위함. 뿐만 아니라 예전 영화들의 리뷰 및 정보를 제공하기 위함.
 
 #### 개발 목표
 
-    한눈에 알아보기 쉬운 UI로 단순한 header와 pc, 테블릿, 모바일 등 다양한 기기에 알맞은 사이즈로 제작
+    한눈에 알아보기 쉬운 UI로 pc, 테블릿, 모바일 등 다양한 기기에 알맞은 사이즈로 제작
 
     header
     -> 로고와 아이콘으로 구성
+    -> 로그인시 로그인 버튼 로그아웃으로 변경
 
     home
     -> 스와이프를 활용한 슬라이드로 카테고리별 영화 리스트 제작
@@ -21,17 +22,20 @@
     detail
     -> 리뷰 등록 폼을 만들어 리뷰를 등록 할 수 있게 함.
     -> 로그인 하지 않을시 리뷰 작성이 되지 않게 구현.
-    -> 리뷰 별 구현해보기
+    -> 리뷰가 100자 이상시 더보기 버튼 구현
+    -> 관련영상 더보기를 만들어 예고편등 영화 소개 영상 구현
 
     search
-    -> 엔터를 누르지 않아도 검색결과가 나오게 구현.
+    -> 인기 검색어 콘텐츠가 검색하면 사라짐
 
     login
-    -> 아이디는 5자 이상, 비밀번호는 8자 이상
-    -> 에러 메세지
+    -> 아이디는 4자 이상, 비밀번호는 8자 이상
 
     Sign-up
-    -> 아이디, 비밀번호, 전화번호 입력으로 간단한 가입
+    -> 아이디, 비밀번호 입력으로 간단한 가입
+    -> 공백,한글 아이디,비밀번호 사용 금지
+
+### 사이트 이용법
 
 #### 활용 스킬
 
@@ -41,7 +45,7 @@
 
 [바로가기](https://developer.themoviedb.org/)
 
-#### 예상 사이트 맵
+#### 사이트 맵
 
     Router - home
            - detail
@@ -49,6 +53,21 @@
            - login
            - sign-up
            - pageNotFound
+
+#### 설치 라이브러리
+
+- React Router DOM
+- styled-components
+- 폰트어썸
+- react-style-reset
+- swiper
+- node-fetch@2
+- axios
+- @tanstack/react-query
+- react-hook-form
+- react-spinners
+- react-helmet-async
+- gh-pages
 
 #### 개발 계획
 
@@ -166,18 +185,3 @@
 - 기간: 12.5 (화)
 
   > 검사 후 배포
-
-### 설치 라이브러리
-
-- React Router DOM
-- styled-components
-- 폰트어썸
-- react-style-reset
-- swiper
-- node-fetch@2
-- axios
-- @tanstack/react-query
-- react-hook-form
-- react-spinners
-- react-helmet-async
-- gh-pages

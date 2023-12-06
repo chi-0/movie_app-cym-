@@ -101,6 +101,10 @@ const InfoWrap = styled.ul`
 const Rate = styled.li`
   margin-right: 25px;
 
+  &::first-letter {
+    color: yellow;
+  }
+
   @media screen and (max-width: 1050px) {
     margin-right: 20px;
   }

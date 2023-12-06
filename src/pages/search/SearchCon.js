@@ -31,11 +31,23 @@ const Img = styled.img`
 export const SearchCon = ({ data }) => {
   return (
     <ImgWrap>
-      {data?.map((data) => (
-        <Link key={data.id} to={`/detail/${data.id}`}>
-          <Img src={IMG_URL + "/w500" + data.poster_path} />
-        </Link>
-      ))}
+      {data.length === 0 ? (
+        <p>검색하신 영화가 없습니다.</p>
+      ) : (
+        <>
+          {data?.map((data) => (
+            <Link key={data.id} to={`/detail/${data.id}`}>
+              <Img
+                src={
+                  data.poster_path
+                    ? IMG_URL + "/w500" + data.poster_path
+                    : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/640px-No-Image-Placeholder.svg.png"
+                }
+              />
+            </Link>
+          ))}
+        </>
+      )}
     </ImgWrap>
   );
 };
